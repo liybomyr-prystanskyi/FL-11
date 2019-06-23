@@ -11,7 +11,7 @@
   color: #fff;
   transition: all .2s ease-in-out;
   font-weight: 500;
-  
+
 }
 
 .tm-content-box ul li {
@@ -85,9 +85,12 @@ section::before {
 .heading ol li:nth-child(1)::after,
 .heading ol li:nth-child(3)::after {
   content: 'New';
+  font-variant: small-caps;
+  font-weight: 500;
   color: red;
   font-size: 12px;
   position: absolute;
+
 }
 
 .blocks li {
@@ -116,6 +119,12 @@ section::before {
   color: #000;
   font-size: 25px;
 }
+.tm-team-description-container .tm-section-description:nth-child(2) {
+  font-style: italic;
+}
+.tm-team-description-container .tm-section-description:nth-child(2)::first-letter {
+padding-left: 20px;
+}
 
 #contact_name {
   border-left: none;
@@ -127,14 +136,21 @@ section::before {
 }
 
 #contact_email {
-  background-color: #76CDD7;
+  background-color: #fff;
   border-radius: 5px;
   border: 2px solid #9CD7FA;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#contact_email:focus {
+background-color: #76CDD7;
   color: #fff;
 }
 
+
 #contact_email::placeholder {
-  color: #fff;
+  color: #7c7c7c;
 }
 
 #contact_subject {
@@ -200,7 +216,7 @@ section::before {
   width: 30px;
   height: 30px;
   display: block;
-  top: 5px;
+  top: 2px;
 }
 
 .tm-content-box:nth-child(1) p:nth-child(2) {
@@ -225,27 +241,27 @@ section::before {
 @keyframes flip {
   from {
     transform: perspective(0) rotate3d(0, 1, 0, -360deg);
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
   }
 
   10% {
     transform: perspective(0) rotate3d(0, 1, 0, -250deg);
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
   }
 
   40% {
     transform: perspective(0) rotate3d(0, 1, 0, -180deg);
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
   }
 
   70% {
     transform: perspective(0) rotate3d(0, 1, 0, 0deg);
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
   }
 
   to {
     transform: perspective(0) rotate3d(0, 1, 0, 0deg);
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
   }
 }
 
@@ -255,6 +271,10 @@ section::before {
     background-color: #fff;
     padding-top: 0;
   }
+
+  .tm-team-description-container .tm-section-description:nth-child(2) {
+    font-style: normal;
+}
 
   .tm-banner {
     padding: 0 0 30px 0;
