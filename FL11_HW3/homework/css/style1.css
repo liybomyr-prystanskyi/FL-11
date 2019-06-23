@@ -1,0 +1,171 @@
+body {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  margin: 0; }
+
+.landing-logo {
+  display: flex;
+  align-items: center; }
+  .landing-logo p {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    color: #2D3040;
+    line-height: 20px; }
+    .landing-logo p span {
+      text-align: center;
+      font-weight: 100; }
+
+.header {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-image: url("../img/m-h-day.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 0 400px 0;
+  z-index: 900; }
+  .header .header-wrap {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    display: block;
+    padding-bottom: 200px; }
+  .header_heading {
+    font-size: 50px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 800;
+    width: 100%;
+    max-width: 400px;
+    color: #2C2F3C; }
+    .header_heading:after {
+      content: '';
+      background-color: #14A0C7;
+      width: 210px;
+      height: auto;
+      min-height: 15px;
+      position: relative;
+      left: 0;
+      z-index: -1;
+      top: -23px;
+      display: block; }
+  .header_text {
+    width: 100%;
+    max-width: 510px;
+    margin-bottom: 60px;
+    font-family: "Hind", sans-serif;
+    color: #2D3040; }
+  .header_button {
+    background-color: #699900;
+    width: 130px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-size: 16px;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff; }
+    .header_button:hover {
+      background-color: #3F6E95;
+      transition: all .3s ease-in-out; }
+
+.section {
+  width: 100%;
+  height: auto;
+  position: relative; }
+  .section_text {
+    width: auto;
+    height: auto;
+    position: relative;
+    text-align: center;
+    font-family: "Hind", sans-serif;
+    font-size: 40px;
+    color: #2C2F3C;
+    z-index: 200;
+    font-weight: 400;
+    display: table;
+    margin: 0 auto; }
+    .section_text::after {
+      content: '';
+      background-color: #14A0C7;
+      width: 178px;
+      height: auto;
+      min-height: 11px;
+      position: absolute;
+      right: 2%;
+      z-index: -1;
+      bottom: 31%; }
+  .section_card_wrap {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px; }
+  .section_card {
+    background-color: #21232E;
+    margin: 0 10px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 15px;
+    position: relative; }
+    .section_card_img {
+      width: 100%;
+      height: auto;
+      min-height: 225px; }
+    .section_card_heading {
+      text-align: center;
+      color: #fff;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 600;
+      position: relative;
+      z-index: 100;
+      flex-direction: column;
+      margin: 0 auto;
+      display: table;
+      width: auto;
+      margin-top: 10px; }
+    .section_card_underline {
+      background-color: #14A0C7;
+      height: auto;
+      min-height: 9px;
+      position: relative;
+      display: table;
+      z-index: -2;
+      top: -9px;
+      width: 100%; }
+    .section_card_text {
+      color: #fff;
+      font-family: "Hind", sans-serif;
+      text-align: center; }
+  .section_banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section_banner_text_wrap {
+      display: block;
+      width: 100%;
+      max-width: 800px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #61911C, #2D5BD8); }
+      .section_banner_text_wrap p {
+        width: 100%;
+        max-width: 500px;
+        position: relative; }
