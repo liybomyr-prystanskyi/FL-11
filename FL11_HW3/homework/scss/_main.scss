@@ -1,4 +1,24 @@
-// Write your styles here
+@mixin section_title {
+  width: auto;
+  height: auto;
+  position: relative;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  color: $sectionTextColor;
+  z-index: 200;
+  font-weight: 600;
+  display: table;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+$footer_description: (
+  to_psd_color:#C0C0CE,
+  my_color:rgb(212, 22, 22)
+);
+
+
 body {
   background-color: $contentBackground;
   width: 100%;
@@ -17,13 +37,19 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     font-family: $font2;
-    font-weight: 600;
+    font-weight: 800;
     color: $logoColor;
     line-height: 20px;
+    font-size: 25px;
+    padding-left: 15px;
+    margin: 0;
+    padding-top: 10px;
 
     span {
       text-align: center;
       font-weight: 100;
+      font-size: 12px;
+      letter-spacing: -1px;
     }
   }
 }
@@ -48,33 +74,34 @@ body {
     height: auto;
     display: block;
     padding-bottom: 200px;
+    padding-top: 20px;
   }
 
   &_heading {
-    font-size: 50px;
+    font-size: 70px;
     font-family: $font1;
     font-weight: 800;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     color: $headerTitleColor;
 
     &:after {
-      content: '';
       background-color: $headerAfterColor;
-      width: 210px;
+      content: '';
+      width: 295px;
       height: auto;
-      min-height: 15px;
+      min-height: 20px;
       position: relative;
       left: 0;
       z-index: -1;
-      top: -23px;
+      top: -33px;
       display: block;
     }
   }
 
   &_text {
     width: 100%;
-    max-width: 510px;
+    max-width: 515px;
     margin-bottom: 60px;
     font-family: $font2;
     color: $headerTextColor;
@@ -96,6 +123,7 @@ body {
     &:hover {
       background-color: $hoverBtn;
       transition: all .3s ease-in-out;
+      transform: scale(1.1);
     }
   }
 }
@@ -106,17 +134,7 @@ body {
   position: relative;
 
   &_text {
-    width: auto;
-    height: auto;
-    position: relative;
-    text-align: center;
-    font-family: "Hind", sans-serif;
-    font-size: 40px;
-    color: $sectionTextColor;
-    z-index: 200;
-    font-weight: 400;
-    display: table;
-    margin: 0 auto;
+    @include section_title;
 
     &::after {
       content: '';
@@ -125,9 +143,9 @@ body {
       height: auto;
       min-height: 11px;
       position: absolute;
-      right: 2%;
+      right: 3%;
       z-index: -1;
-      bottom: 31%;
+      bottom: 35%;
     }
   }
 
@@ -139,7 +157,7 @@ body {
     background-color: transparent;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 
   &_card {
@@ -151,11 +169,13 @@ body {
     flex-direction: column;
     padding: 15px;
     position: relative;
+    max-width: 33.3%;
+    width: 100%;
 
     &_img {
       width: 100%;
-      height: auto;
-      min-height: 225px;
+      height: 225px;
+      border-radius: 5px;
     }
 
     &_heading {
@@ -170,21 +190,22 @@ body {
       display: table;
       width: auto;
       margin-top: 10px;
+      font-size: 25px;
     }
 
     &_underline {
       background-color: $headingUnderlineColor;
       height: auto;
-      min-height: 9px;
+      min-height: 11px;
       position: relative;
       display: table;
       z-index: -2;
-      top: -9px;
+      top: -13px;
       width: 100%;
     }
 
     &_text {
-      color: #fff;
+      color: #C0C0CE;
       font-family: $font2;
       text-align: center;
     }
@@ -197,19 +218,124 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -85px;
+    z-index: 100;
+    
 
     &_text_wrap {
       display: block;
       width: 100%;
-      max-width: 800px;
       border-radius: 5px;
       background: $readyBackgroundColor;
+      max-width: 990px;
+      position: relative;
+      z-index: 100;
 
-      p {
-        width: 100%;
-        max-width: 500px;
-        position: relative;
+    }
+
+    &_button {
+      display: block;
+      position: relative;
+      right: 15%;
+      background-color: $btnReadyColor;
+      width: 130px;
+      height: 45px;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      font-size: 16px;
+      font-family: "Source Sans Pro", sans-serif;
+      color: #fff;
+      z-index: 400;
+
+      &:hover {
+        @extend .header_button:hover;
       }
     }
+
+    &_heading {
+      color: $sectionBannerTitleColor;
+      font-family: $font1;
+      font-weight: 800;
+      font-size: 35px;
+      width: 100%;
+      max-width: 600px;
+      z-index: 200;
+      margin: 30px 0 10px 100px;
+
+      &:after {
+        content: '';
+        background-color: $sectionBannerAdterColor;
+        width: 75px;
+        height: auto;
+        min-height: 15px;
+        position: relative;
+        left: 23.5%;
+        z-index: -1;
+        top: -21px;
+        display: block;
+      }
+    }
+
+    &_text {
+      width: 100%;
+      max-width: 600px;
+      color: #C0C0CE;
+      font-size: 20px;
+      font-family: $font2;
+      margin: 0 0 40px 100px;
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: $footerColor;
+  padding: 150px 0 50px 0;
+
+  .footer-wrap {
+    width: 85%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-cr {
+      color: #C0C0CE;
+      font-family: $font2;
+      font-size: 16px;
+    }
+  }
+
+  &_logo {
+    display: flex;
+    flex-direction: row;
+    img {
+      padding-right: 15px;
+    }
+    p {
+      color:#C0C0CE;
+      font-size: 30px;
+      margin: 0;
+      padding: 10px 0 0 0;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+  &_text {
+    width: 100%;
+    max-width: 350px;
+    // color: #C0C0CE;
+    color: map-get($footer_description,to_psd_color);
+    font-family: $font2;
+    margin: 0;
+    font-size: 16px;
   }
 }
