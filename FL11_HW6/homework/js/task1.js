@@ -1,0 +1,11 @@
+let a1 = prompt('enter a1 for a');
+let a2 = prompt('enter a2 for a');
+let b1 = prompt('enter b1 for b');
+let b2 = prompt('enter b2 for b');
+let c1 = prompt('enter c1 for c');
+let c2 = prompt('enter c2 for c');
+let number2 = 2;
+let positionOne = (+a1 + +b1) / number2;
+let positionTwo = (+a2 + +b2) / number2;
+let formule = positionOne === +c1 && positionTwo === +c2;
+console.log(formule);
