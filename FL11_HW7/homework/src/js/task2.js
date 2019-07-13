@@ -25,25 +25,25 @@ for (start; start < number3; start++) {
       + maxTries + '\rTotal price:' + total + '\rPossible price at current attempt:' + num1);
   } if (enter1 === formule) {
     total = total + num1;
-    alert('Congratulation, you won! Your prize is:' + total);
+    alert('Congratulation, you won!Your prize is:' + total);
   } else if (enter1 !== formule) {
     enter2 = prompt('Chose a roulette pocket number from 0 to number8 \rAttempts left:' +
       (maxTries - number1) + '\rTotal price:' + total + '\rPossible price at current attempt:' + num2);
   } if (num2 === formule) {
     total = total + num2;
-    alert('Congratulation, you won! Your prize is:' + total + num2);
+    alert('Congratulation, you won!Your prize is:' + total + num2);
   } else if (num2 !== formule) {
     enter3 = prompt('Chose a roulette pocket number from 0 to number8' +
       '\rAttempts left:' + (maxTries - number2) +
       '\rTotal price:' + total + '\rPossible price at current attempt:' + num3);
   } if (enter3 === formule) {
     total = total + num3;
-    alert('Congratulation, you won! Your prize is:' + total);
+    alert('Congratulation, you won!Your prize is:' + total);
   } else if (enter1 !== formule && enter2 !== formule && enter3 !== formule) {
-    alert('Thank you for your participation. Your prize is:' + total);
+    alert('Thank you for your participation.Your prize is:' + total);
     start2 = confirm('Do you want to play again?');
     if (!start2) {
-      alert('You did not become a billionaire, but can.');
+      alert('You did not become a billionaire,but can.');
     } else if (start) {
       maxTries = maxTries * number2;
       userNumber = userNumber + number4;
