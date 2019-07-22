@@ -1,4 +1,4 @@
-class fighter {
+class Fighter {
   constructor(object) {
     this.percent = 100;
     this.name = object.name;
@@ -51,13 +51,13 @@ class fighter {
       this.dealDamage(damageByHit, guard);
       console.log(
         this.getName() +
-          " make " +
+          'make' +
           this.getDamage() +
-          " damage to " +
+          'damage to' +
           guard.getName()
       );
     } else {
-      console.log(this.getName() + " attack missed");
+      console.log(this.getName() + 'attack missed');
     }
   }
 
@@ -66,15 +66,15 @@ class fighter {
   }
 }
 
-const first_fighter = new fighter({
-  name: "John",
+const first_fighter = new Fighter({
+  name: 'John',
   damage: 20,
   agility: 25,
   hp: 100
 });
 
-const second_fighter = new fighter({
-  name: "Jim",
+const second_fighter = new Fighter({
+  name: 'Jim',
   damage: 40,
   agility: 40,
   hp: 100
@@ -86,7 +86,7 @@ function battle(first_fighter, second_fighter) {
   const m_number = -1;
 
   if (first_fighter.getHealth() <= 0 || second_fighter.getHealth() <= 0) {
-    if (warriorFirst.getHealth() <= 0) {
+    if (first_fighter.getHealth() <= 0) {
       return console.log(`${first_fighter.getName()} is dead and can't fight`);
     } else if (second_fighter.getHealth() === 0) {
       return console.log(`${second_fighter.getName()} is dead and can't fight`);
